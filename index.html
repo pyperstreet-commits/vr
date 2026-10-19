@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>pyper VR</title>
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script> 
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+<!-- This is the main body of the website- ALL your content goes AFTER the <body> tag and before the </body> tag -->
+<body>
+<!--environment-->
+<a-scene>
+<a-assets>
+<img id="art1" src="images/flower.jpg" title="" preload="auto">
+</a-assets>
+<a-assets>
+ <img id="art1" src="images/flower.jpg" preload="auto">
+ <img id="frame" src="images/flo" preload="auto">
+</a-assets>
+
+    
+</a-assets>
+<a-entity environment="preset:; dressingAmount:500;"></a-entity>
+<!-- Museum floor starts here -->
+
+<a-box id="floor" position="0 0 0" scale="10.5 10.5 0.1" rotation="90 0 0" color="#09090B" ></a-box>
+
+<a-box id="box1" position="0 1.473 4.907" rotation="0 0 0" scale="10 3 0.2" color="black"></a-box>
+<a-box id="box2" position="0 1.473 -4.907" rotation="0 0 0" scale="10 3 0.2" color="black"></a-box>
+<a-box id="box3" position="5.049 1.454 -0.008" rotation="0 -90 0" scale="10 3 0.2" color="black"></a-box>
+<a-box id="box4" position="-5.049 1.454 -0.008" rotation="0 -90 0" scale="10 3 0.2" color="black"></a-box>
+
+<a-cylinder id="triangle_front" segments-radial="3" position="0 3.874 4.907" rotation="-90 0 0" scale="5.774 0.2 1.8" color="black"></a-cylinder>
+
+<a-cylinder id="triangle_back" segments-radial="3" position="0 3.874 -4.907" rotation="-90 0 0" scale="5.774 0.2 1.8" color="black"></a-cylinder>
+
+<a-box id="roof_right" position="2.580 4.328 0" rotation="28.433 90 0" scale="10.931 0.20 6.110" color="#09090B"></a-box>
+
+<a-box id="roof_left" position="-2.599 4.321 -0.017" rotation="28.433 -90 0" scale="10.931 0.20 6.130" color="#09090B"></a-box>
+<a-plane id="art1" src="#art1" scale="2 2 0.05" rotation="0 0 0" position="-0.162 1.934 -4.792"></a-plane>
+
+
+<!-- Movement -->
+<!-- Camera + Controllers Rig -->
+<a-entity id="rig">
+  <!-- Headset view (camera) -->
+  <a-camera position="0 1.6 0"></a-camera>
+
+  <!-- Left hand laser pointer -->
+  <a-entity laser-controls="hand: left"></a-entity>
+
+  <!-- Right hand with thumbstick movement -->
+  <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+</a-entity>
+
+</a-scene> 
+<script src="https://gftruj.github.io/webzamples/aframe/controls/oculus-thumbstick-controls.js"></script>
+</body>
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
+
